@@ -1,0 +1,277 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+/*------------------------*/
+form .form-group{
+    width: 25%;
+    border: 1px solid #ccc;
+    margin:0 auto;
+    padding: 20px;
+    align-items: center;
+    
+}
+label{
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    align-items: center;
+    margin:0 auto;
+}
+.container h2 {
+    font-size: 3.2em;
+    margin: 0 auto;
+    text-align: center;
+}
+.col-md-12 a{
+    font-size: 20px;
+}
+
+/*------------------------*/
+body{
+    font-family: sans-serif;
+    margin: 0;
+
+    /* Evitar los margenes */
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table td,.table th{
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+.table th{
+    background-color: darkblue;
+    color:#ffffff;
+}
+.table tbody tr:nth-child(even){
+    background-color: #f5f5f5;
+}
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1xp solid rgba(219, 209, 209, 0.5);
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+    color: rgb(0, 0, 0);
+    background-color: rgb(102, 162, 219);
+
+}
+button:hover{
+    background-color: rgb(102, 162, 219);
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+.color-acento{color:rgb(102, 162, 219)}
+header{
+    background-color: rgb(245, 245, 245);
+}
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(102, 162, 219);
+    font-size: 1.45em;
+}
+header .container{
+    display:flex;
+    flex-direction: column;/* Sirve para que se ordenen en una columna */
+    align-items:center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight:bold;
+    color: rgb(102, 162, 219);
+}
+header a:hover{
+    color: rgb(102, 162, 219);/* Cambia color de la navegacion */
+
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/web.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero h1{
+    color: white;
+}
+
+#Curso .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#Lenguajes{
+    background-color: rgb(30,30,30);
+    color: white;
+}
+#Lenguajes .container{
+    text-align: center;
+    padding: 150px 12px; /*Expandir el fondo(background)*/
+}
+#Lenguajes h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+#Lenguajes p{
+    display: none;
+
+}
+
+#Lenguajes .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+}
+.carta:first-child{/*Programador front-end*/
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/html.png");
+
+}
+.carta:nth-child(2){/*Programador Full-stack*/
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/css.png");
+}
+.carta:nth-child(3){/*Programador Python*/
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/php.png");
+}
+
+@media (min-width: 720px){
+    header{
+        position: fixed;/*despues de colocar position fixed , siempre colocar width 100%*/
+        width: 100%;/*Para que la barra de arriba siempre este presente*/
+    }
+    header .container{
+        flex-direction: row;/*centrar */
+        justify-content: space-between;/*Se parar los elementos*/
+    }
+    header nav{/*Se expecifica el lugar*/
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+    #hero h1{
+        font-size: 5em;
+    }
+    /*--------------------------------------------*/
+    #curso .container{
+        display: flex;
+        justify-content: center;
+
+    }
+    #curso .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;/*Centrar el texto.*/
+        
+    }
+    #curso h2{
+        margin-top: 0px;
+
+    }
+    #curso .img-container{
+        background-image: url("img/web.png");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+    #Lenguajes .programas{
+        display: flex;
+        justify-content: center;
+    }
+    #Lenguajes p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #Lenguajes h2{
+        font-size: 4em;
+    }
+    #Lenguajes h3{
+        margin-top: 0;
+    }
+    #Lenguajes .carta{
+        padding: 15px;
+    }
+}
+/*responsive tabla*/
+@media (max-width: 500px) {
+    .table thead{
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 15px;
+    }
+    .table td{
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
