@@ -1,0 +1,10 @@
+p.imagen{
+    text-align: center;
+}
+body{
+    height: 930px;
+    background-image: url("img/rojo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
