@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 2em;}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+tr{
+	font-size: 1em;
+	text-align: center;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    background-color: #979DF5 ;
+    
+}
+/*Encabezado*/
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: #2A34EF ;
+    font-size: 1.45em;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+}
+header {
+    background-color: rgb(245, 245, 245);
+}
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: none;
+    font-weight: bold;
+    color: black;
+}
+header a:hover{
+    color: blue;
+}
+/*-------PARTE DEL CATALOGO------------*/
+#catalogo{
+    background-color: #9CA1F5 ;
+    color: white;
+}
+#catalogo .container{
+    text-align: center;
+    padding: 150px 12px; /*Expandir el fondo(background)*/
+}
+#catalogo h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+#catalogo .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 20px;
+    margin: 12px;
+    border-radius: 15px;
+}
+.carta:first-child{
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/Cod.png");
+
+}
+.carta:nth-child(2){
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/Mc.jpg");
+}
+.carta:nth-child(3){
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/For.png");
+}
+/*---------Caracteristicas de las tablas.-----------*/
+table {
+    font-family: 'Roboto',sans-serif;
+    border-collapse: collapse;
+    font-size: 12px;
+    background-color: #F1F59C;
+}
+
+table th {
+    text-align: center;
+    align-items: center;
+    background-color: #F1F59C;
+    color: black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    
+}
+/*---------Responsive-----------*/
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+    #catalogo .juegos{
+        display: flex;
+        justify-content: center;
+    }
+    #catalogo p{
+        display: block;
+        
+    }
+    #catalogo h2{
+        font-size: 4em;
+    }
+    #catalogo h3{
+        margin-top: 0;
+    }
+    #catalogo .carta{
+        padding: 200px;/*tamaño de la carta*/
+    }
+
+    table th{
+    padding: 62px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    align-items: center;
+    }
